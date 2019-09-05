@@ -5,21 +5,17 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    {{>nav}}
     <h1>Welcome to IronTumblr</h1>
 
     <a href="/create">Create a new post !</a>
 
-    {{!-- {{#each post}}
+    {{#each post}}
       <div>
-        <ul>
-          <li>
-            {{this.content}}
-          </li>
-          <li>
-            {{this.image}}
-          </li>
+           <h2><a href="/{{this.id}}">{{this.content}}</a></h2>
+            <img src="{{this.picPath}}" alt="{{this.picName}}">
         </ul>
       </div>
-    {{/each}} --}}
+    {{/each}}
   </body>
 </html>

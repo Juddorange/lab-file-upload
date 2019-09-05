@@ -1,0 +1,20 @@
+{{>nav}}
+
+<h2>{{post.content}}</h2>
+<img src="{{post.picPath}}" alt="{{post.picName}}">
+
+{{!-- {{#each comments}}
+  {{}}
+{{/each}} --}}
+
+<h2>Write a comment</h2>
+
+<form method="post" action="/{{post.id}}" enctype="multipart/form-data">
+  <label for="content">Content</label>
+  <input id="content" type="text" name="content">
+
+  <label for="image">Image</label>
+  <input id="image" type="file" name="image">
+
+  <button>Send your comment !</button>
+</form>

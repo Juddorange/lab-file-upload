@@ -8,10 +8,8 @@ const post = new Schema (
       type: Schema.Types.ObjectId,
       ref: "User"
     },
-    image: {
-      picPath : String,
-      picName : String,
-    }
+    picPath : String,
+    picName : String,
   })
 
   const Post = mongoose.model("Post", post);
